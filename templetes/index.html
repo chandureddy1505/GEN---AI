@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>AI Quote Generator</h1>
+
+        <form method="POST">
+            <select name="topic" required>
+                <option value="" disabled selected>Select a topic</option>
+                <option value="motivational">Motivational</option>
+                <option value="humorous">Humorous</option>
+                <option value="success">Success</option>
+            </select>
+
+            <button type="submit">Generate Quote</button>
+        </form>
+
+        {% if quote %}
+            <p class="quote">"{{ quote }}"</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>
